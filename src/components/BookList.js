@@ -4,8 +4,7 @@ import Book from './Book' ;
 const BookList = (props) => {
     return (
         <div>
-            <h2>Hi, these are the books:</h2>
-            {props.children}
+             {props.books.map(book => <Book key={book.id} book={book} addBook = {props.addBook} />)}
         </div>
     ) ;
 } ;
